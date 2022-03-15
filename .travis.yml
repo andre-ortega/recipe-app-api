@@ -7,7 +7,7 @@ env:
 services:
   - postgresql
 install:
-  - pipenv install
+  - pip install -r requirements.txt
 
 script:
-  - python manage.py test
+  - python manage.py test && flake
