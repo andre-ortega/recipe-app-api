@@ -1,1 +1,0 @@
-Skipping docker lol. Already have everything installed and running here.
