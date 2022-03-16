@@ -12,3 +12,5 @@ install:
 script:
   - python manage.py test
 
+before_script:
+  - psql -c 'create database travis_ci_test'; -U postgres
