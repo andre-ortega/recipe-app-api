@@ -45,4 +45,3 @@ class AdminSiteTests(TestCase):
         res = self.client.get(url)
         # Fails with an error until a username is specified for the user
         self.assertEqual(res.status_code, 200)
-

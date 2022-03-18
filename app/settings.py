@@ -87,6 +87,7 @@ DATABASES = {
         'NAME': 'travis_ci_test',
         'USER': 'postgres',
         'PASSWORD': '',
+        #'PASSWORD': 'Nw3WnU3keWJykk',
         'HOST': 'localhost',
     }
 }
