@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'core',
-    'user'
+    'user',
+    'recipe'
 ]
 
 MIDDLEWARE = [
@@ -85,8 +86,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'travis_ci_test',
         'USER': 'postgres',
-        'PASSWORD': '',
-        #'PASSWORD': 'Nw3WnU3keWJykk',
+        #'PASSWORD': '',
+        'PASSWORD': 'Nw3WnU3keWJykk',
         'HOST': 'localhost',
     }
 }
