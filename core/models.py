@@ -69,3 +69,26 @@ class Ingredient(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Recipe(models.Model):
+    """ Recipe object """
+    # Add a foreign key to the auth user model, if we remove that user then
+    #  the recipes will be removed as well (cascade)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE
+    )
+    title = models.CharField(max_length=255)
+    time_minutes = models.IntegerField()
+    price = models.DecimalField(max_digits=5, decimal_places=2)
+
+    # Best way to make an optional field (blank=True)
+    link = models.CharField(max_length=255, blank=True)
+
+    # Allow many recipes to be assigned to many ingredients
+    ingredients = models.ManyToManyField('Ingredient')
+    tags = models.ManyToManyField('Tag')
+
+    def __str__(self):
+        return self.title
