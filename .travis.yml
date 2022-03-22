@@ -14,6 +14,7 @@ script:
 
 before_script:
   - sudo chown -R travis:travis /home/travis/
+  - sudo chown $UID:$UID
   - psql -c 'create database travis_ci_test;' -U postgres
   - python manage.py wait_for_db
   - python manage.py migrate
