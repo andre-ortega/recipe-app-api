@@ -86,6 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'travis_ci_test',
         'USER': 'postgres',
+        #'PASSWORD': '',
         'PASSWORD': '',
         'HOST': 'localhost',
     }
@@ -130,7 +131,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-# This is a deviation that might/should not work?
+
+# This is a slight deviation that should work..
 MEDIA_ROOT = './vol/web/media'
 STATIC_ROOT = './vol/web/static'
 
